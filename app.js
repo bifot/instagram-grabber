@@ -53,9 +53,9 @@ getCountMembers('pravda.show', 0, 150000).then(result => {
 
             req.get(`https://www.instagram.com/${instagram}/?__a=1`, (body, response, error) => {
               if (!error && response.statusCode == 200) {
-                girl.count_instagram = JSON.parse(body).user.followed_by.count;
+                girl.followers = JSON.parse(body).user.followed_by.count;
               } else {
-                girl.count_instagram = -1;
+                girl.followers = -1;
               }
             })
 
