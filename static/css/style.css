@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.uk-grid {
+  max-width: 960px; }
+
+.table caption {
+  padding: 20px 7.5px; }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0">
+  <title>Instagram Grabber by @bifot</title>
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="uk-grid uk-container-center">
+    <table class="uk-table table">
+      <caption>Instagram Grabber by @bifot</caption>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>Sex</td>
+          <td>City</td>
+          <td>Instagram</td>
+          <td>Followers</td>
+        </tr>
+        <% data.forEach(profile => { %>
+          <tr>
+            <td><a href="https://vk.com/id<%= profile.id %>"><%= profile.name %></a></td>
+            <td><%= profile.sex %></td>
+            <td><%= profile.city %></td>
+            <td><a href="https://instagram.com/<%= profile.instagram %>"><%= profile.instagram %></a></td>
+            <td><%= profile.count_instagram %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

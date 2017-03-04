@@ -1,0 +1,33 @@
+{
+  "name": "instagram-grabber",
+  "version": "1.0.0",
+  "description": "Parser instagram accounts from public page in VK.",
+  "main": "app.js",
+  "dependencies": {
+    "cheerio": "0.22.0",
+    "ejs": "2.5.5",
+    "express": "4.14.0",
+    "gulp": "3.9.1",
+    "gulp-sass": "3.0.0",
+    "tiny_request": "1.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bifot/instagram-grabber.git"
+  },
+  "keywords": [
+    "instagram",
+    "parser",
+    "grabber"
+  ],
+  "author": "Mikhail Semin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bifot/instagram-grabber/issues"
+  },
+  "homepage": "https://github.com/bifot/instagram-grabber#readme"
+}
