@@ -7,3 +7,10 @@
 
 .table caption {
   padding: 20px 7.5px; }
+
+.sort {
+  margin: 30px 0 0 0; }
+  .sort a {
+    padding: 0 5px; }
+  .sort__active {
+    text-decoration: underline; }

@@ -24,10 +24,10 @@ var getCountMembers = (group, offset, max) => {
   });
 };
 
-getCountMembers('pravda.show', 0, 150000).then(result => {
+getCountMembers('pravda.show', 0, 500000).then(result => {
   for (var i = 0; i < result[1]; i += 1000) {
     req.get({
-      url: `https://api.vk.com/method/groups.getMembers?group_id=${result[0]}&offset=${i}&sort=id_desc&fields=sex,connections,city&v=5.60`,
+      url: `https://api.vk.com/method/groups.getMembers?group_id=${result[0]}&offset=${i}&sort=id_desc&fields=sex,connections,city,online&v=5.60`,
       json: true
     }, (body, response, error) => {
       if (!error && response.statusCode == 200) {
@@ -39,6 +39,7 @@ getCountMembers('pravda.show', 0, 150000).then(result => {
           var name = `${user.first_name} ${user.last_name}`;
           var sex = user.sex;
           var city = user.city && user.city.title;
+          var online = user.online;
           var instagram = user.instagram;
 
           // sex = 1 => female; sex = 2 => male
@@ -49,6 +50,7 @@ getCountMembers('pravda.show', 0, 150000).then(result => {
             girl.name = name;
             girl.sex = sex == 1 ? 'female' : 'male';
             girl.city = city;
+            girl.online = online == 1 ? 'online' : 'offline';
             girl.instagram = instagram;
 
             req.get(`https://www.instagram.com/${instagram}/?__a=1`, (body, response, error) => {

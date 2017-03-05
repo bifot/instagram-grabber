@@ -16,3 +16,15 @@ body {
     padding: 20px 7.5px;
   }
 }
+
+.sort {
+  margin: 30px 0 0 0;
+
+  & a {
+    padding: 0 5px;
+  }
+
+  &__active {
+    text-decoration: underline;
+  }
+}
